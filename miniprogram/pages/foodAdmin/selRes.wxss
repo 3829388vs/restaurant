@@ -1,0 +1,48 @@
+/**index.wxss**/
+
+page {
+  padding-top: 54rpx;
+  background-color: #f6f6f6;
+  padding-bottom: 60rpx;
+  background-image: url("https://6170-apps-lnuuz-1302305619.tcb.qcloud.la/icoimages/circal2.jpg?sign=bbb4c71853794a9d31f1a6d55ecab8c9&t=1636545551");
+}
+.radio{
+  margin-left: 20rpx;
+}
+.img image{
+  width: 250rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+  margin-left: 16rpx;
+}
+.item{
+  display: flex;
+  margin-top: 18rpx;
+}
+.edit{
+  width: 100%;
+  height: 350rpx;
+  margin-top: 120rpx;
+  padding-left: 40rpx;
+}
+.button{
+  font-size: 30rpx;
+  }
+.header{
+  position: fixed;
+  top: 0rpx;
+  padding-top: 20rpx;
+  height: 110rpx;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.contant{
+  height: 350rpx;
+  width: 686rpx;
+  background-color: rgba(224, 224, 224, 0.3);
+  border-radius: 12rpx;
+  border: 4rpx solid #a9c0ff;
+  padding: 10rpx 10rpx;
+  font-size: 34rpx;
+}

@@ -1,0 +1,14 @@
+<view class='content'>
+  <view class='img-box'>
+    <view class='img-list'>
+      <block wx:for="{{detailPics}}" wx:key="index">
+        <view class='img-item' bindtap="previewImage" data-img="{{item}}">
+          <image src='{{item}}' mode="aspectFill" bindlongpress="bindlongpressimg" data-id='{{index}}'></image>
+        </view>
+      </block>
+      <view class='chooseimg' bindtap='uploadDetailImage'>
+        <view class="weui-uploader__input-box"></view>
+      </view>
+    </view>
+  </view>
+</view>

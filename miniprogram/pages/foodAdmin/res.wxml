@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="contant">
+  <uploadResource bindmyevent="myEventListener" count='{{countPic}}' showUrl="{{showImgUrl}}" uploadUrl="{{uploadImgUrl}}"></uploadResource>
+</view>

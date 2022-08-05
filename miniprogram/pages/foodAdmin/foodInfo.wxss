@@ -1,0 +1,63 @@
+/* pages/foodAdmin/foodInfo.wxss */
+.container{
+  width: 100%;
+  height: 1400rpx;
+  background-color: #e0e0e0;
+}
+.head{
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.head image{
+  width: 350rpx;
+  height: 350rpx;
+  border-radius: 30rpx;
+}
+.Info{
+  margin-top: 30rpx;
+  width: 450rpx;
+  background-color:rgba(255,255,255,0.8);
+  border-radius: 30rpx;
+  padding: 26rpx 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row{
+  margin-bottom: 30rpx;
+}
+.row input{
+  width: 420rpx;
+  border-bottom: 1rpx solid #a5a5a5;
+  padding: 8rpx 6rpx;
+  font-size: 34rpx;
+  margin-top: 10rpx;
+}
+.text{
+  font-weight: bold;
+}
+.row textarea{
+  width: 380rpx;
+  height: 180rpx;
+  border: 1rpx solid #a5a5a5;
+  padding: 10rpx 8rpx;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+.save{
+  position: absolute;
+  top: 26rpx;
+  right: 30rpx;
+  background-color: #0099ff;
+  color: #ffffff;
+  font-size: 32rpx;
+  padding: 14rpx 38rpx;
+  border-radius: 36rpx;
+}
+.save image{
+  width: 70rpx;
+  height: 70rpx;
+}

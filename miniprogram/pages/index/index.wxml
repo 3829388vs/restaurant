@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <image class="img" src="/pages/index/img/favicon.png"></image>
+    <view class="title">欢迎使用</view>
+    <view class="title">好食快餐点餐平台</view>
+    <button style="margin: 60rpx 0" type="primary" bindtap="golist" wx:if="{{!isAdmin}}">进入点餐页面</button>
+    <view class="login" wx:if="{{isAdmin}}">
+      <label style="color:#ffffff">账号：</label>
+      <input type="text" placeholder="请输入管理员账号" bindinput="adminuser"></input>
+      <label style="color:#ffffff">密码：</label>
+      <input type="text" password="true" placeholder="请输入密码" bindinput="adminpass"></input>
+      <button type="primary" bindtap="Login">登录</button>
+    </view>
+
+</view>

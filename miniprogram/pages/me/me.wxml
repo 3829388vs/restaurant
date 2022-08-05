@@ -1,0 +1,34 @@
+<!--pages/me.wxml-->
+<view class="container">
+	<view class="top">
+	<view class="header">
+		<view class="top-head" bindtap="editInfo"  wx:if="{{!isAdmin}}">
+		{{userInfo.name}}
+		</view>
+		<view class="top-head" wx:else>
+		管理员
+		</view>
+		<view class="edit" bindtap="editInfo" wx:if="{{!isAdmin}}"><image src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/edit.png?sign=b2c8812ed7212a2169e8199b70203b6b&t=1646725411"></image></view>
+	</view>
+	<view class="rows">
+	<view class="row">
+	 <image src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/%E8%B4%A6%E6%88%B7.png?sign=6e4c0823b609ea396621f2e7204ab148&t=1646990229"></image>
+	 <label class="username" wx:if="{{!isAdmin}}">{{userInfo.username}}</label>
+	 <label class="username" wx:else>admin</label>
+	</view>
+	<view class="row" wx:if="{{!isAdmin}}">
+		<image src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/%E9%92%B1%E5%8C%85.png?sign=63a5d0613a137ac5044a43acb660e137&t=1646990567"></image>
+	 <label class="money">{{userInfo.money}}</label>
+	 <label>元</label>
+	 <label class="charge" bindtap="charge">充值</label>
+	</view>
+	</view>
+	</view>
+	<view class="func">
+		<view class="butt">
+			<button type="default" bindtap="adminLogin" wx:if="{{!isAdmin}}">管理员登录</button>
+			<button type="default" bindtap="editNotice" wx:if="{{isAdmin}}">修改公告</button>
+			<button type="default" bindtap="exit">退出账号</button>
+		</view>
+	</view>
+</view>

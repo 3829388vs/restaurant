@@ -1,0 +1,44 @@
+<!--pages/check/check.wxml-->
+<view class="container">
+<view class="info">
+  <view class="contactType" style="margin-bottom: 20rpx;">
+    <text style="margin-right: 20rpx;">{{name}}</text>
+    <text>{{phone}}</text>
+  </view>
+  <view class="status">
+    {{status}}
+  </view>
+  <view class="contactType">
+    <text style="margin-right: 20rpx;">下单时间：<text style="font-size:32rpx;color:#a7a7a7;">{{orderTime}}</text></text>
+  </view>
+</view>
+  <scroll-view class="foodlist" scroll-y="true">
+    <view class="listItem" wx:for="{{checkItem}}" wx:key="checkItem">
+      <view class="list-img">
+        <image src="{{item.url}}"></image>
+      </view>
+      <view class="list-text">
+       <text style="font-weight: bold;font-size: 34rpx;">{{item.name}} x {{item.num}}</text>
+       <text style="color: red;padding-top: 12rpx;">¥ {{item.price}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="memo">
+    <view class="memo-text">
+     <text style="font-weight: bold;">备注：</text> <input type="text" disabled="true" bindinput="inputedit" value="{{memo}}"/>
+    </view>
+    <view class="method">
+    <text style="margin-right: 20rpx;font-weight: bold;">就餐方式：</text>
+      <text>{{type}}</text>
+    </view>
+  </view>
+  <view style="height: 120rpx;"></view>
+  <view class="check">
+    <view class="check-cont">
+      <view class="totalMoney">
+       <text class="sum">合计：</text><text>¥</text>{{totalMoney}}
+      </view>
+      <view class="cancelOrder" bindtap="cancelOrder" wx:if="{{isUser}}">取消订单</view>
+    </view>
+  </view>
+</view>

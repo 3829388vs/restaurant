@@ -1,0 +1,153 @@
+/* pages/check/check.wxss */
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(233, 233, 233);
+  padding: 12rpx 22rpx;
+}
+.cancelOrder{
+  font-weight: bold;
+  color: #9b9b9b;
+  margin-left: 60rpx;
+  font-size: 32rpx;
+}
+.foodlist{
+  background-color: #ffffff;
+  width: 90%;
+  height: 40%;
+  border-radius: 30rpx;
+  padding: 16rpx 36rpx;
+  
+}
+.edit{
+  margin-left: 92%;
+  margin-top: -20rpx;
+}
+.edit image{
+  width: 56rpx;
+  height: 56rpx;
+}
+.listItem{
+  border-bottom: 1rpx solid #cecece;
+  padding: 12rpx 20rpx;
+  display: flex;
+}
+.list-img image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 16rpx;
+  margin-right: 36rpx;
+}
+.list-text{
+  font-size: 32rpx;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contactType{
+  font-size: 32rpx;
+}
+.address{
+  font-size: 32rpx;
+  font-weight: bold;
+  letter-spacing: 1rpx;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.info{
+  background-color: #ffffff;
+  width: 90%;
+  height: 200rpx;
+  border-radius: 30rpx;
+  padding: 16rpx 36rpx;
+  margin-top: 20rpx;
+}
+.memo{
+  background-color: #ffffff;
+  width: 86%;
+  height: 19%;
+  border-radius: 30rpx;
+  padding: 26rpx 48rpx;
+}
+.memo-text input{
+  margin-top: 20rpx;
+}
+.status{
+  text-align: center;
+  padding: 10rpx 0rpx;
+  background-color: coral;
+  width: 140rpx;
+  border-radius: 22rpx;
+  font-size: 30rpx;
+  color: #ffffff;
+  margin-left: 68%;
+  margin-top: -50rpx;
+}
+.timeSele{
+  background-color: white;
+  height: 560rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+
+}
+.time{
+  color: rgb(64, 209, 112);
+  font-size: 36rpx;
+  padding: 30rpx 30rpx;
+}
+.contant{
+  height: 60rpx;
+  width: 90%;
+  background-color: rgba(224, 224, 224, 0.3);
+  border-radius: 12rpx;
+  border: 2rpx solid #c9c9c9;
+  padding: 10rpx 10rpx;
+  font-size: 34rpx;
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+}
+.method{
+  margin-top: 38rpx;
+}
+.checkout{
+  background-color: #e92fe3;
+  width: 180rpx;
+  border-radius: 60rpx;
+  font-size: 36rpx;
+  text-align: center;
+  padding: 22rpx 32rpx;
+  color: #ffffff;
+  margin-right: 26rpx;
+}
+.totalMoney text{
+  font-size: 30rpx;
+  color: red;
+  padding-right: 12rpx;
+}
+.check{
+  position: absolute;
+  width: 95%;
+  height: 134rpx;
+  background-color: #ffffff;
+  border-radius: 36rpx 36rpx 0rpx 0rpx;
+  bottom: 0rpx;
+}
+.totalMoney{
+  color: red;
+  font-size: 42rpx;
+  font-weight: bold;
+  width: 60%;
+  text-align: right;
+}
+.sum{
+  color: black !important;
+  font-size: 36rpx !important;
+}
+.check-cont{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}

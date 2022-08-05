@@ -1,0 +1,28 @@
+<!--pages/foodAdmin/foodInfo.wxml-->
+<view class="container">
+  <view class="head">
+    <image src="{{foodInfo.url}}"></image>
+  </view>
+  <view class="Info">
+  <view class="save" bindtap="save">
+  保存
+  </view>
+    <view class="row">
+      <text class="text">食品名：</text>
+      <input type="text" bindinput="changeName" value="{{foodInfo.name}}"></input>
+    </view>
+    <view class="row">
+      <text class="text">所属区域：</text>
+      <input type="text" bindinput="changeDistrict" value="{{foodInfo.district}}"></input>
+    </view>
+    <view class="row">
+      <text class="text">价格：</text>
+      <input type="number" bindinput="changePrice" value="{{foodInfo.price}}"></input>
+    </view>
+    <view class="row">
+      <text class="text">描述：</text>
+      <textarea type="text" bindinput="changeDetail" maxlength="60" value="{{foodInfo.detail}}"></textarea>
+    </view>
+  </view>
+  <view style="width: 100%;height: 150rpx;"></view>
+</view>

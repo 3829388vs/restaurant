@@ -1,0 +1,66 @@
+<!--pages/check/check.wxml-->
+<view class="container">
+<view class="info">
+  <view class="contactType">
+    <text style="margin-right: 20rpx;">{{name}}</text>
+    <text>{{phone}}</text>
+  </view>
+  <view class="edit" bindtap="editInfo"><image src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/edit.png?sign=b2c8812ed7212a2169e8199b70203b6b&t=1646725411"></image></view>
+</view>
+  <scroll-view class="foodlist" scroll-y="true">
+    <view class="listItem" wx:for="{{checkItem}}" wx:key="checkItem">
+      <view class="list-img">
+        <image src="{{item.url}}"></image>
+      </view>
+      <view class="list-text">
+       <text style="font-weight: bold;font-size: 34rpx;">{{item.name}} x {{item.num}}</text>
+       <text style="color: red;padding-top: 12rpx;">¥ {{item.price}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="memo">
+    <view class="memo-text">
+     <text>备注：</text> <input type="text" bindinput="inputedit" value="{{memo}}" placeholder="请填写备注"/>
+    </view>
+    <view class="method">
+    <text style="margin-right: 20rpx;">就餐方式：</text>
+      <text class="contant" bindtap="showType" style="color: {{type == ''? 'grey' : 'black'}};">{{type == ''? '请选择' : type}}</text>
+          <view class="timeSele" wx:if="{{showType}}">
+        <view style="display: flex;justify-content: space-between;">
+        <view bindtap="closeType" class="time">关闭</view>
+        <view bindtap="sure" class="time">确定</view>
+      </view>
+        <picker-view indicator-style="height: 35px;" style="width: 100%; height: 170px;" value="{{value}}" bindchange="bindChange2">
+          <picker-view-column>
+            <view wx:for="{{types}}" wx:key="index" style="line-height: 35px; text-align: center;">{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+    </view>
+  </view>
+  <view style="height: 120rpx;"></view>
+  <view class="check">
+    <view class="check-cont">
+      <view class="totalMoney">
+       <text class="sum">合计：</text><text>¥</text>{{totalMoney}}
+      </view>
+      <view class="checkout" bindtap="checkout">提交订单</view>
+    </view>
+  </view>
+    <!-- 密码输入框 -->
+<view wx:if='{{showPayPwdInput}}'>
+    <view class='bg_layer'></view>
+    <view class='input_main'>
+        <view class='input_title'>
+            <view class='input_back' catchtap='hidePayLayer'><text></text></view>
+            <text>输入支付密码</text>
+        </view>
+        <view class='input_row' catchtap='getFocus'>
+            <view class='pwd_item' wx:for='{{6}}' wx:key='item' wx:for-index='i'>
+                <text wx:if='{{pwdVal.length>i}}'></text>
+            </view>
+        </view>
+        <input class='input_control' password type='number' focus='{{payFocus}}' bindinput='inputPwd' maxlength='6'/>
+    </view>
+</view>
+</view>

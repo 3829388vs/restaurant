@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "cloud-tip-modal": "/components/cloudTipModal/index",
+    "uploadResource": "/components/uploadResource/uploadResource"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的图片库",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

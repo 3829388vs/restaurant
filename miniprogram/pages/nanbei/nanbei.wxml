@@ -1,0 +1,73 @@
+<!--pages/nanbei/nanbei.wxml-->
+<view class="container"></view>
+<view class="nodata" wx:if="{{nodata}}">暂无菜品</view>
+<view class="product-container">
+	<view class="product-list" style='height:{{height}}px'>
+		<view class="product-item" wx:for="{{foodList}}" wx:for-index="index" wx:key='foodList'>
+			<slide-delete pid="{{item._id}}" bindaction="handleSlideDelete" wx:key='foodList'>
+				<view class="product-item-wrap">
+					<!-- <icon type="{{item.select}}" size="19" data-index="{{index}}" data-select="{{item.select}}" bindtap="change" color="red" /> -->
+					<view class="product_img">
+						<image src="{{item.url}}" class='goods-img' mode="widthFix"></image>
+					</view>
+					<view class="product-movable-item">
+						<view class="goods-name">{{item.name}}</view>
+						<view class="goods-type">{{item.detail}}</view>
+						<view class="goods-price">￥{{item.price}}</view>
+					</view>
+					<view class="product-movable-item product-movable-item-amount">
+						<view class="num-box">
+							<view class="btn-groups">
+								<button size="mini" data-index="{{index}}" bindtap="subtraction">—</button>
+								<input class='num' type='number' data-index="{{index}}"  bindinput='numIputBlur' value='{{item.num}}'></input>
+								<button class="btn-add" size="mini" data-index="{{index}}" data-num="{{numb}}" bindtap="addtion">+</button>
+							</view>
+						</view>
+					</view>
+				</view>
+			</slide-delete>
+		</view>
+	</view>
+	<view class="cart" wx:if="{{showCart}}">
+	<view class="cart-cont">
+	<view class="cart_allSelect">
+			<icon type="{{allSelect}}" size="19" data-select="{{allSelect}}" bindtap="allSelect" color='red' style="margin-right: 12rpx;"/>
+			<view class="allSelect-text">全选</view>
+			<view class="delete">
+			<image bindtap="clearcart" src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/delete.png?sign=a0712ac9a4963cf9f0aa09d4776788d4&t=1647774192"></image>
+		</view>
+		</view>
+		<view class="product-list" style='height:350rpx;width: 90%;'>
+			<view class="product-item" wx:for="{{cartList}}" wx:key="cartList" style="width: 90%;height: 37%;margin-left: 20rpx;margin-top: 12rpx;">
+				<view class="product-item-wrap">
+					<view class="product_img">
+						<image src="{{item.url}}" class='goods-img' mode="widthFix"></image>
+					</view>
+					<view class="product-movable-item">
+						<view class="goods-name">{{item.name}} ×{{item.num}}</view>
+						<view class="goods-price">￥{{item.price}}</view>
+					</view>
+					<icon type="{{item.select}}" size="19" data-select="{{item.select}}" bindtap="selectCartItem" data-name="{{item.name}}" color='red' style="margin-right: 12rpx;"/>
+					</view>
+			</view>
+		</view>
+	</view>
+	</view>
+	<view class="cart-fixbar">
+	
+		<view class="allSelect">
+			<image src="../img/shopcart.png" bindtap="cart"></image>
+		</view>
+
+		<view class="count">
+			<text>合计：</text>￥{{count}}
+		</view>
+		<view class="order">
+			<view class="orders" bindtap="checkOut">
+				结算
+			</view>
+
+		</view>
+	</view>
+</view>
+

@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+<radio-group style="padding: 10rpx 20rpx;" bindchange="bindChange">
+<radio wx:for="{{imgs}}"  wx:key="index" class="radio" value="{{item}}" bindtap="selImg" data-img="{{item}}">
+
+<view class="item">
+<view class="img">
+<image mode="aspectFill" src="{{item}}"></image>
+</view>
+</view>
+</radio>
+</radio-group>
+</view>
+

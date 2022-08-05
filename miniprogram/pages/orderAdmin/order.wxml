@@ -1,0 +1,42 @@
+<!--pages/nanbei/nanbei.wxml-->
+<view class="product-container">
+<!--pages/order/order.wxml-->
+<view class="container">
+	<view class="no-data" wx:if="{{nodata}}">
+		暂无订单数据
+	</view>
+   <view class="product-container">
+	<view class="product-list" style='height:1020rpx'>
+		<view class="product-item" wx:for="{{orderlist}}" wx:for-index="index" wx:key='orderlist'>
+			<slide-delete pid="{{item.id}}" bindaction="handleSlideDelete" wx:key='orderlist'>
+				<view class="product-item-wrap">
+					<icon type="{{item.select}}" size="19" data-index="{{index}}" data-select="{{item.select}}" data-id="{{item._id}}" bindtap="handleSlideDelete" color="red" />
+					<view class="product_img" bindtap="toInfo" data-id="{{item._id}}">
+						<image src="{{item.item[0].url}}" class='goods-img' mode="widthFix"></image>
+					</view>
+					<view class="product-movable-item" bindtap="toInfo" data-id="{{item._id}}">
+						<view class="goods-name" style="font-weight: bold;width: 450rpx;">{{item.title}}</view>
+						<view class="goods-price">￥{{item.money}}</view>
+            <view class="goods-name" style="color: #919191;width:250rpx">{{item.memo}}</view>
+						<view class="status">{{item.status}}</view>
+					</view>
+				</view>
+			</slide-delete>
+		</view>
+	</view>
+  </view>
+</view>
+	<view class="cart-fixbar">
+		<view class="order">
+      <view class="orders" bindtap="comple">
+				完成订单
+			</view>
+		</view>
+		<view class="order">
+      <view class="orders" bindtap="cancel">
+				取消订单
+			</view>
+		</view>
+	</view>
+</view>
+

@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/nanbei/nanbei",
+    "pages/order/order",
+    "pages/me/me",
+    "pages/me/editInfo",
+    "pages/check/check",
+    "pages/order/orderInfo",
+    "pages/foodAdmin/foodAdmin",
+    "pages/foodAdmin/foodInfo",
+    "pages/foodAdmin/addFood",
+    "pages/foodAdmin/selRes",
+    "pages/foodAdmin/res",
+    "pages/foodAdmin/addMenu",
+    "pages/orderAdmin/order",
+    "pages/orderAdmin/compleorder"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "好食快餐店",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "pages/img/home1.png",
+        "selectedIconPath": "pages/img/home1.png",
+        "text": "点餐"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "pages/img/board1.png",
+        "selectedIconPath": "pages/img/board1.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "pages/img/me.png",
+        "selectedIconPath": "pages/img/me.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "functionalPages": true,
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

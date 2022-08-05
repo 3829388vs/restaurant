@@ -1,0 +1,41 @@
+<!--pages/list/list.wxml-->
+
+<view class="container">
+<view class="username" wx:if="{{!isAdmin}}">欢迎<label>{{name}}</label></view>
+  <image class="img" src="/pages/index/img/favicon.png"></image>
+  <view class="title">好食快餐店</view>
+  <view class="notice"><text style="margin-left:{{left}}rpx">{{notice}}</text></view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" bindchange="changeIndex" interval="{{interval}}" duration="{{duration}}" circular="true" class="swiper">  
+<block wx:for="{{imgUrls}}">  
+<swiper-item>  
+   <navigator url="{{item.link}}" hover-class="navigator-hover">  
+    <image src="{{item.url}}" class="slide-image" width="355" height="150"/>  
+   </navigator>  
+</swiper-item>  
+</block>  
+</swiper>
+<view class="food-text">{{text}}</view>
+    <view class="login">
+      <view wx:if="{{!isAdmin}}" class="login_box" bindtap="gonanbei" data-itm="{{item.name}}" wx:for="{{menuList}}" wx:key="menuList">
+        <image src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/3be997e0880cc4a51aa2ab012edf761c.jpeg?sign=e62eab8b81682d659bebf0546848e879&t=1647003514"></image>
+        <view class="login_text">{{item.name}}</view>
+      </view>
+      <view wx:if="{{isAdmin}}" class="login_box2" bindtap="caiping" data-itm="caiping">
+        <image src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/%E9%A3%9F%E5%93%81.png?sign=1c5c1b41a8148185bebfaff4cc9ef1f7&t=1648007006"></image>
+        <view class="login_text">菜品管理</view>
+      </view>
+      <view wx:if="{{isAdmin}}" class="login_box2" bindtap="caixi" data-itm="caixi">
+        <image src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/%E9%A3%9F%E5%93%81.png?sign=1c5c1b41a8148185bebfaff4cc9ef1f7&t=1648007006"></image>
+        <view class="login_text">菜系管理</view>
+      </view>
+      <view wx:if="{{isAdmin}}" class="login_box2" bindtap="dingdan" data-itm="dingdan">
+        <image src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/%E8%AE%A2%E5%8D%95.png?sign=ca076d5aca30548734e42a1b64bfc8d0&t=1648007079"></image>
+        <view class="login_text">订单管理</view>
+      </view>
+      <view wx:if="{{isAdmin}}" class="login_box2" bindtap="wancheng" data-itm="wancheng">
+        <image src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/%E5%AE%8C%E6%88%90.png?sign=24af785ea45bee50f1921eb58a07ffb1&t=1648007107"></image>
+        <view class="login_text">完成订单</view>
+      </view>
+    </view>
+
+</view>

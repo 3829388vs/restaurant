@@ -1,0 +1,31 @@
+<!--pages/nanbei/nanbei.wxml-->
+<view class="product-container">
+	<view class="product-list" style='height:1020rpx'>
+		<view class="product-item" wx:for="{{menulist}}" wx:for-index="index" wx:key='menulist'>
+			<slide-delete>
+				<view class="product-item-wrap">
+					<icon type="{{item.select}}" size="19" data-index="{{index}}" data-select="{{item.select}}" data-id="{{item._id}}" bindtap="handleSlideDelete" color="red" />
+					<view class="product_img" bindtap="toInfo" data-name="{{item.name}}">
+						<image src="https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/3be997e0880cc4a51aa2ab012edf761c.jpeg?sign=a2259738fb101c9b72ae632c1f8cf9e0&t=1648205393" class='goods-img' mode="widthFix"></image>
+					</view>
+					<view class="product-movable-item" bindtap="toInfo" data-name="{{item.name}}">
+						<view class="goods-name">{{item.name}}</view>
+					</view>
+				</view>
+			</slide-delete>
+		</view>
+	</view>
+	<view class="cart-fixbar">
+		<view class="order">
+      <view class="orders" bindtap="add">
+				新增
+			</view>
+		</view>
+		<view class="order">
+      <view class="orders" bindtap="deletefood">
+				删除
+			</view>
+		</view>
+	</view>
+</view>
+

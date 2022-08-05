@@ -1,0 +1,34 @@
+<view class="container">
+<view class="edit">
+  <view style="display: flex;flex-wrap: wrap;">
+  <view class='chooseimg' style="margin-left: 230rpx;" bindtap='selImgs' data-indx="1">
+      <view wx:if="{{!img}}" class="weui-uploader__input-box"></view>
+      <view wx:if="{{img}}"><image mode="aspectFill" src="{{img}}"></image></view>
+      <view class="upImgs" bindtap="upload">上传图片库</view>
+    </view>
+  </view>
+  <view class="clear" bindtap="clearAll">清除图片</view>
+</view>
+<view class="Info">
+  <view class="save" bindtap="addItem">
+  保存
+  </view>
+    <view class="row">
+      <text class="text">食品名：</text>
+      <input type="text" bindinput="changeName" placeholder="请输入名称" value="{{foodInfo.name}}"></input>
+    </view>
+    <view class="row">
+      <text class="text">所属菜系：</text>
+      <input type="text" bindinput="changeDistrict" placeholder="请输入所属菜系" value="{{foodInfo.district}}"></input>
+    </view>
+    <view class="row">
+      <text class="text">价格：</text>
+      <input type="number" bindinput="changePrice" placeholder="请输入价格" value="{{foodInfo.price}}"></input>
+    </view>
+    <view class="row">
+      <text class="text">描述：</text>
+      <textarea type="text" bindinput="changeDetail" placeholder="请输入描述" maxlength="60" value="{{foodInfo.detail}}"></textarea>
+    </view>
+  </view>
+</view>
+

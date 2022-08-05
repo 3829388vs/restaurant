@@ -1,0 +1,34 @@
+<!--pages/nanbei/nanbei.wxml-->
+<view class="product-container">
+	<view class="no-data" wx:if="{{foodList.length ==0}}">暂无菜品</view>
+	<view class="product-list" style='height:1020rpx'>
+		<view class="product-item" wx:for="{{foodList}}" wx:for-index="index" wx:key='foodList'>
+			<slide-delete>
+				<view class="product-item-wrap">
+					<icon type="{{item.select}}" size="19" data-index="{{index}}" data-select="{{item.select}}" data-id="{{item._id}}" bindtap="handleSlideDelete" color="red" />
+					<view class="product_img" bindtap="toInfo" data-id="{{item._id}}">
+						<image src="{{item.url}}" class='goods-img' mode="widthFix"></image>
+					</view>
+					<view class="product-movable-item" bindtap="toInfo" data-id="{{item._id}}">
+						<view class="goods-name">{{item.name}}</view>
+						<view class="goods-type">{{item.detail}}</view>
+						<view class="goods-price">￥{{item.price}}</view>
+					</view>
+				</view>
+			</slide-delete>
+		</view>
+	</view>
+	<view class="cart-fixbar">
+		<view class="order">
+      <view class="orders" bindtap="add">
+				新增
+			</view>
+		</view>
+		<view class="order">
+      <view class="orders" bindtap="deletefood">
+				删除
+			</view>
+		</view>
+	</view>
+</view>
+

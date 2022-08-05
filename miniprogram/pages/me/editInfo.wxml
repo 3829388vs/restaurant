@@ -1,0 +1,21 @@
+<!--pages/me/editInfo.wxml-->
+<view class="container">
+  <view class="info">
+    <view class="row">
+      <label class="name">用户账号</label>
+      <input type="text" style="color: gray;" disabled="true" placeholder="请输入账号" value="{{userInfo.username}}"></input>
+    </view>
+    <view class="row">
+      <label class="name">姓名</label>
+      <input type="text" placeholder="请输入姓名" value="{{userInfo.name}}" bindinput="changeName"></input>
+    </view>
+    <view class="row">
+      <label class="name">手机号码</label>
+      <input type="text" placeholder="请输入手机号码" value="{{userInfo.phone}}" bindinput="changePhone"></input>
+    </view>
+    <view class="submit">
+    <button type="primary" bindtap="edit">修改</button>
+    <button type="primary" bindtap="back">返回</button>
+  </view>
+  </view>
+</view>

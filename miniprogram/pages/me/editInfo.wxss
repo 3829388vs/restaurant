@@ -1,0 +1,34 @@
+/* pages/me/editInfo.wxss */
+.container{
+  width: 100%;
+  height: 1500rpx;
+  background-color: #f1f1f1;
+  padding-top: 30rpx;
+}
+.info{
+  width: 100%;
+  height: 500rpx;
+}
+
+.row{
+  width: 100%;
+  margin-top: 30rpx;
+}
+.row input{
+  background-color: #ffffff;
+  height: 80rpx;
+  margin-top: 12rpx;
+  padding: 0rpx 30rpx;
+}
+.name{
+  font-size: 36rpx;
+  margin-left: 30rpx;
+}
+.submit{
+  width: 100%;
+  margin-top: 130rpx;
+}
+.submit button{
+  width: 330rpx;
+  margin-top: 42rpx;
+}

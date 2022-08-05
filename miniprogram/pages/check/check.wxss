@@ -1,0 +1,188 @@
+/* pages/check/check.wxss */
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(233, 233, 233);
+  padding: 12rpx 22rpx;
+}
+.foodlist{
+  background-color: #ffffff;
+  width: 90%;
+  height: 40%;
+  border-radius: 30rpx;
+  padding: 16rpx 36rpx;
+  
+}
+.edit{
+  margin-left: 92%;
+  margin-top: -20rpx;
+}
+.edit image{
+  width: 56rpx;
+  height: 56rpx;
+}
+.listItem{
+  border-bottom: 1rpx solid #cecece;
+  padding: 12rpx 20rpx;
+  display: flex;
+}
+.list-img image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 16rpx;
+  margin-right: 36rpx;
+}
+.list-text{
+  font-size: 32rpx;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contactType{
+  font-size: 32rpx;
+}
+.address{
+  font-size: 32rpx;
+  font-weight: bold;
+  letter-spacing: 1rpx;
+  margin-bottom: 30rpx;
+  margin-top: 20rpx;
+}
+.info{
+  background-color: #ffffff;
+  width: 90%;
+  height: 180rpx;
+  border-radius: 30rpx;
+  padding: 16rpx 36rpx;
+  margin-top: 20rpx;
+}
+.memo{
+  background-color: #ffffff;
+  width: 86%;
+  height: 21%;
+  border-radius: 30rpx;
+  padding: 26rpx 48rpx;
+}
+.memo-text input{
+  border-bottom: 2rpx solid #c7c7c7;
+  margin-top: 20rpx;
+}
+.timeSele{
+  background-color: white;
+  height: 560rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+
+}
+.time{
+  color: rgb(64, 209, 112);
+  font-size: 36rpx;
+  padding: 30rpx 30rpx;
+}
+.contant{
+  height: 60rpx;
+  width: 90%;
+  background-color: rgba(224, 224, 224, 0.3);
+  border-radius: 12rpx;
+  border: 2rpx solid #c9c9c9;
+  padding: 10rpx 10rpx;
+  font-size: 34rpx;
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+}
+.method{
+  margin-top: 38rpx;
+}
+.checkout{
+  background-color: #e92fe3;
+  width: 180rpx;
+  border-radius: 60rpx;
+  font-size: 36rpx;
+  text-align: center;
+  padding: 22rpx 32rpx;
+  color: #ffffff;
+  margin-right: 26rpx;
+}
+.totalMoney text{
+  font-size: 30rpx;
+  color: red;
+  padding-right: 12rpx;
+}
+.check{
+  position: absolute;
+  width: 95%;
+  height: 140rpx;
+  background-color: #ffffff;
+  border-radius: 36rpx 36rpx 0rpx 0rpx;
+  bottom: 0rpx;
+}
+.totalMoney{
+  color: red;
+  font-size: 42rpx;
+  font-weight: bold;
+  margin-right: 36rpx;
+  padding-left: 22%;
+}
+.sum{
+  color: black !important;
+  font-size: 36rpx !important;
+}
+.check-cont{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.btn_pay{
+  margin: 100rpx auto; width: 600rpx; height: 100rpx; line-height: 100rpx; border-radius: 100rpx;
+  background-color: #d3a95a; color: #fff; font-size: 36rpx; text-align: center; 
+}
+/* 支付密码css start */
+.bg_layer{
+  position: fixed; left: 0; top: 0; bottom: 0; right: 0;
+  background-color: rgba(0, 0, 0, 0.6); z-index: 9998;
+}
+.input_main{
+    position: fixed; left: 0; bottom: 500rpx; width: 100%; height: 394rpx;
+    background-color: #fff; z-index: 9999;
+}
+.input_title{
+    width: 100%; height: 90rpx; line-height: 90rpx; text-align: center; 
+    font-size: 32rpx; border-bottom: 1rpx solid #e2e2e2;
+}
+.input_back{
+    position: absolute; left: 0; top: 0;
+    width: 80rpx; height: 90rpx; display: flex; justify-content: center; align-items: center;
+}
+.input_back text{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: white;
+  border: 1rpx solid #aaa;
+  border-width: 5rpx 0 0 5rpx;
+  transform: rotate(-45deg);
+}
+.input_tip{  margin: 30rpx; font-size: 24rpx; color: #888; }
+/* 密码掩码模拟 */
+.input_row{
+  width: 690rpx; margin: 0 auto; height: 98rpx; position: relative;
+  display: flex; align-items: center; border: 1rpx solid #e2e2e2; border-radius: 20rpx;
+}
+.input_row .pwd_item{
+  flex: 1; display: flex; align-items: center; justify-content: center; 
+  height: 100%; border-right: 1rpx solid #e2e2e2; position: relative;
+}
+.pwd_item:nth-last-of-type(1) { border-right: 0; } 
+.pwd_item text { 
+  width: 30rpx; height: 30rpx; border-radius: 30rpx; background-color: #555;
+}
+.forget_pwd{ 
+  float: right; margin: 30rpx; width: 100rpx; text-align: right; font-size: 24rpx; color: #ff7800;
+}
+/* 文本输入框位置: 设置到左边隐藏 */
+.input_control { 
+  position: relative; left: -300rpx; bottom: 0; width: 100rpx; height: 100rpx;
+}

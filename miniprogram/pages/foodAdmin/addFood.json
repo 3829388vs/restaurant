@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "cloud-tip-modal": "/components/cloudTipModal/index",
+    "uploadImages": "/components/uploadImages/uploadImages"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "新增信息",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

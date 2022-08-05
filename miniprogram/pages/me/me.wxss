@@ -1,0 +1,80 @@
+/* pages/me.wxss */
+.top{
+    width: 100%;
+    height: 560rpx;
+    background-image: url("https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/meImg.jpeg?sign=33c091b6c6f88402dca84b504829acdf&t=1646394831");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    height: 100%;
+    width: 100%;
+}
+.top-head{
+    width: 170rpx;
+    height: 170rpx;
+    margin-top: 100rpx;
+    border-radius: 100%;
+    border: 12rpx solid #ffffffce;
+    text-align: center;
+    line-height: 170rpx;
+    vertical-align: middle;
+    color: #6347ff;
+    font-weight: bolder;
+    font-size: 42rpx;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.rows{
+    color: #ffffff;
+    font-size: 38rpx;
+    padding-top: 30rpx;
+    margin-left: 150rpx;
+    text-align: left;
+}
+.username{
+    color: #ffffff;
+    font-weight: bold;
+}
+.money{
+    color: #ee406c;
+    font-size: 42rpx;
+    padding: 0rpx 10rpx;
+}
+.edit{
+    position: absolute;
+    top: 160rpx;
+    left: 490rpx;
+}
+.edit image{
+    width: 56rpx;
+    height: 56rpx;
+}
+.row{
+    display: flex;
+    margin: 12rpx 0rpx;
+}
+.func{
+    margin-top: 50rpx;
+    width: 100%;
+}
+.charge{
+    font-size: 32rpx;
+    color: blue;
+    text-decoration: underline;
+    margin-left: 22rpx;
+}
+.row image{
+    width: 54rpx;
+    height: 54rpx;
+    padding-right: 20rpx;
+    margin-left: 80rpx;
+}
+.butt button{
+    width: 100%;
+    margin-top: 40rpx;
+}

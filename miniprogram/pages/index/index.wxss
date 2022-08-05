@@ -1,0 +1,58 @@
+/**index.wxss**/
+page{
+  /* background-color: lightskyblue; */
+  background-image: url("https://636c-cloud1-2g62kh6y05adcf2a-1309263676.tcb.qcloud.la/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220311202624.jpg?sign=a3d41748e086c5136b7af9d9cc90442a&t=1647001632");
+  background-size: cover;
+}
+.img {
+  padding: 60rpx;
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.title {
+  font-family: PingFang SC;
+  font-weight: 600;
+  color: #e017d0;
+  font-size: 50rpx;
+  margin-bottom: 34rpx;
+}
+
+.login {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+.login input{
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8rpx;
+  width: 500rpx;
+  height: 86rpx;
+  margin: 20rpx 0rpx;
+  padding: 0rpx 12rpx;
+  font-size: 36rpx;
+  border: 1px solid #6ab7ff;
+}
+.login button{
+  margin-top: 40rpx;
+}
+
+.login_box {
+  width: 270rpx;
+  height: 120rpx;
+  border-radius: 10%;
+  border: 1rpx solid green;
+  background-color: greenyellow;
+  margin: 30rpx;
+}
+
+.login_text {
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: black;
+  font-size: 43rpx;
+  box-sizing: content-box;
+  text-align: center;
+  padding-top: 30rpx;
+}
